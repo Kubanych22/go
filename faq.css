@@ -1,0 +1,39 @@
+#faq + ul {
+  position: relative;
+}
+
+#faq + ul > li {
+  background-color: #ffffff;
+  color: #1c1a1a;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 30px 70px;
+  margin-bottom: 20px;
+}
+
+#faq + ul > li:nth-child(2n) {
+  color: #ffffff;
+  background-color: #440f51;
+}
+
+#faq + ul > li > p {
+  margin: 0;
+  height: 46px;
+}
+
+#faq + ul > li > p:after {
+  position: absolute;
+  content: '';
+  background-image: url("img/open-purple.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 46px;
+  height: 46px;
+  right: 50px;
+}
+
+#faq + ul > li:nth-child(2n) > p:after {
+  background-image: url("img/open.svg");
+}
+
+
