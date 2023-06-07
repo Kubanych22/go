@@ -11,6 +11,10 @@
   margin-bottom: 20px;
 }
 
+#faq + ul > li:last-child {
+  margin-bottom: 0;
+}
+
 #faq + ul > li:nth-child(2n) {
   color: #ffffff;
   background-color: #440f51;
@@ -18,7 +22,7 @@
 
 #faq + ul > li > p {
   margin: 0;
-  height: 46px;
+  min-height: 46px;
 }
 
 #faq + ul > li > p:after {
