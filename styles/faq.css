@@ -21,8 +21,9 @@
 }
 
 .faq__question {
-  margin: 0;
   min-height: 46px;
+  display: flex;
+  align-items: center;
 }
 
 .faq__question:after {
