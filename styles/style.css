@@ -33,9 +33,7 @@ a {
 img, svg {
   display: block;
   max-width: 100%;
-  /*max-height: 100%;*/
   height: auto;
-  /*object-fit: contain;*/
 }
 
 .visually-hidden {
@@ -79,10 +77,6 @@ body {
   position: relative;
   min-height: 823px;
   margin-bottom: 50px;
-  /*background-image: url("../img/banner.png");*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: 600px;*/
-  /*background-position: right bottom;*/
 }
 
 .banner:after {
@@ -126,7 +120,7 @@ body {
 
 .halls__item {
   min-height: 710px;
-  padding-top: 275px;
+  padding-top: 315px;
   margin-bottom: 60px;
   font-size: 70px;
   font-weight: 700;
@@ -156,20 +150,40 @@ body {
   background-image: url("../img/hall-4.jpg");
 }
 
-.halls__item span {
-  display: block;
-  max-width: 211px;
-  margin: 0 auto;
-}
-
 .form__btn {
   font-size: inherit;
 }
 
+.about__container {
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__images {
+  margin-right: 80px;
+}
+
+.about__wrapper {
+  max-width: 500px;
+}
+
+.about__text_wrapper {
+  margin-bottom: 50px;
+}
+
 .about__text {
-  margin-bottom: 16px;
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 28px;
+}
+
+.about__text:last-child {
+  margin-bottom: 0;
+}
+
+.about__creator_blockquote {
+  margin: 0;
 }
 
 .about__creator-quote {
@@ -186,8 +200,11 @@ body {
 }
 
 .about__creator-info {
+  padding-top: 15px;
+  margin-right: 40px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 30px;
 }
 
