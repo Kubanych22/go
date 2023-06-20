@@ -154,6 +154,10 @@ body {
   background-image: url("../img/hall-4.jpg");
 }
 
+.form {
+  padding: 0 15px;
+}
+
 .form__btn {
   font-size: inherit;
 }
