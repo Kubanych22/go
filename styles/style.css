@@ -1,7 +1,4 @@
-@import "normalize.css";
-
 html {
-  /*position: relative;*/
   box-sizing: border-box;
 }
 
@@ -17,12 +14,19 @@ ul {
   margin: 0;
 }
 
+input {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
 p,
 fieldset {
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -44,7 +48,7 @@ img, svg {
 
 body {
   min-width: 320px;
-  min-height: 100%; /* min-height: 100vh */
+  min-height: 100%;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -53,7 +57,7 @@ body {
 }
 
 .main {
-  padding-top: 96px;
+  padding-top: 25px;
 }
 
 .main__section {
@@ -74,278 +78,11 @@ body {
   margin: 0 auto;
 }
 
-.banner {
-  position: relative;
-  max-width: 1180px;
-  margin: 0 auto 50px auto;
-  min-height: 823px;
-}
-
-.banner:after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 762px;
-  top: 40px;
-  background-image: url("../img/banner.png");
-  background-repeat: no-repeat;
-  background-size: 600px;
-  background-position: right bottom;
-}
-
-.banner__title {
-  font-size: 150px;
-  line-height: 1;
-  font-weight: 900;
-  letter-spacing: -0.1em;
-}
-
-.banner__description {
-  font-size: 28px;
-  line-height: 50px;
-  margin-left: 100px;
-}
-
 .title {
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   font-size: 40px;
   font-weight: 700;
   line-height: 50px;
   text-align: center;
   text-transform: uppercase;
 }
-
-.halls__title {
-  margin-bottom: 60px;
-}
-
-.halls__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.halls__item {
-  min-height: 710px;
-  padding-top: 315px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 80px;
-  text-align: center;
-  text-transform: uppercase;
-  background-repeat: no-repeat;
-}
-
-.halls__item:nth-of-type(1) {
-  background-image: url("../img/hall-1.jpg");
-}
-
-.halls__item:nth-of-type(2) {
-  background-image: url("../img/hall-2.jpg");
-}
-
-.halls__item:nth-of-type(3) {
-  background-image: url("../img/hall-3.jpg");
-}
-
-.halls__item:nth-of-type(4) {
-  background-image: url("../img/hall-4.jpg");
-}
-
-.form {
-  padding: 0 15px;
-}
-
-.form__btn {
-  font-size: inherit;
-}
-
-.about__container {
-  max-width: 1180px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.about__images {
-  max-height: 600px;
-  margin-right: 80px;
-}
-
-.about__wrapper {
-  max-width: 500px;
-  padding: 0 20px;
-}
-
-.about__text_wrapper {
-  margin-bottom: 50px;
-}
-
-.about__text {
-  margin-bottom: 30px;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.about__text:last-child {
-  margin-bottom: 0;
-}
-
-.about__creator_blockquote {
-  margin: 0;
-}
-
-.about__creator-quote {
-  margin-bottom: 39px;
-  font-size: 44px;
-  line-height: 50px;
-  text-transform: uppercase;
-}
-
-.about__creator-quote span {
-  display: inline-block;
-  color: #6c0287;
-  margin: 0 10px 0 5px;
-}
-
-.about__creator-info {
-  margin-right: 40px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px 30px;
-}
-
-.about__creator-info-photo {
-  border-radius: 50%;
-}
-
-.about__creator-info-text {
-  max-width: 280px;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.reviews__wrapper {
-  max-width: 980px;
-  margin: 0 auto 50px;
-  display: flex;
-  gap: 20px;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.reviews__wrapper:last-child {
-  margin-bottom: 0;
-}
-
-.reviews__person_photo {
-  max-width: 280px;
-  margin-bottom: 11px;
-  border-radius: 50%;
-}
-
-.reviews__person_name {
-  text-align: center;
-}
-
-.reviews__person-text {
-  padding-top: 50px;
-}
-
-.faq__list {
-  position: relative;
-}
-
-.faq__item {
-  background-color: #ffffff;
-  color: #1c1a1a;
-  font-weight: 700;
-  font-size: 24px;
-  padding: 30px 70px;
-  margin-bottom: 20px;
-}
-
-.faq__item:last-child {
-  margin-bottom: 0;
-}
-
-.faq__item:nth-child(2n) {
-  color: #ffffff;
-  background-color: #440f51;
-}
-
-.faq__question {
-  min-height: 46px;
-  display: flex;
-  align-items: center;
-}
-
-.faq__question:after {
-  position: absolute;
-  content: '';
-  background-image: url("../img/open-purple.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 46px;
-  height: 46px;
-  right: 50px;
-}
-
-.faq__item:nth-child(2n) > .faq__question:after {
-  background-image: url("../img/open.svg");
-}
-
-.contacts {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 28px;
-}
-
-.contacts__icon:nth-of-type(2n - 1) {
-  margin-bottom: 39px;
-}
-.contacts__icon:nth-of-type(2n) {
-  margin-bottom: 11px;
-}
-
-.contacts__icon-link {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.social {
-  display: flex;
-  gap: 20px;
-}
-
-.social__link {
-  display: block;
-  width: 50px;
-  height: 50px;
-  color: #ffffff;
-  border-radius: 50%;
-  outline: 1px solid transparent;
-  outline-offset: 3px;
-  transition-property: color, outline-color;
-  transition-duration: 0.3s, 0.2s;
-  transition-timing-function: ease-in-out;
-}
-
-.social__link:hover {
-  color: #cd06ff;
-}
-
-.social__link:focus {
-  outline-color: #cd06ff;
-}
-
-.social__link:active {
-  color: #840aa3;
-}
-
-
-
-

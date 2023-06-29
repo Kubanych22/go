@@ -1,2 +1,11 @@
+@import "normalize.css";
 @import "style.css";
+@import "header.css";
+@import "banner.css";
+@import "rest.css";
+@import "halls.css";
+@import "reserve.css";
+@import "about.css";
+@import "reviews.css";
 @import "faq.css";
+@import "contacts.css";

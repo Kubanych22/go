@@ -1,0 +1,59 @@
+.rest__title {
+  max-width: 980px;
+}
+
+.rest__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+}
+
+.rest__item {
+  flex-basis: 380px;
+  height: 228px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 380px;
+}
+
+.rest__text {
+  margin: 0 40px 34px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.rest__item_glass {
+  background-image: url("../img/vr-glasses.jpg");
+}
+
+.rest__item_audio {
+  background-image: url("../img/audio-systems.jpg");
+}
+
+.rest__item_audio .rest__text {
+  margin-bottom: 0;
+}
+
+.rest__item_karaoke {
+  background-image: url("../img/karaoke.jpg");
+}
+
+.rest__item_games {
+  background-image: url("../img/table-games.jpg");
+}
+
+.rest__item_services {
+  background-image: url("../img/movie-services.jpg");
+}
+
+.rest__item_services .rest__text {
+  margin-bottom: 0;
+}
+
+.rest__item_play {
+  background-image: url("../img/plаy-stаtiоn-5.jpg");
+}
