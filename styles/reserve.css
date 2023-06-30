@@ -66,6 +66,15 @@
 
 .choice {
   padding: 7px 15px 8px;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  transition: background-color, transform .3s;
+}
+
+.choice:hover {
+  border-color: #640aa3;
+  background-color: #eadeed;
+  transform: scale(1.05);
 }
 
 .choice[value] {
