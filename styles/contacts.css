@@ -16,6 +16,20 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  fill: #cd06ff;
+}
+
+.contacts__icon-link:hover svg {
+  fill: #9105b4;
+}
+
+.contacts__icon-link:focus {
+  fill: #795f88;
+  outline: none;
+}
+
+.contacts__icon-link:active svg {
+  fill: #9105b4;
 }
 
 .social {

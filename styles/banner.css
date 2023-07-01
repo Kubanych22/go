@@ -75,6 +75,20 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.banner__book:hover {
+  background-color: #840aa3;
+}
+
+.banner__book:focus {
+  background-color: #840aa3;
+  outline: none;
+}
+
+.banner__book:active {
+  background-color: #640aa3;
 }
 
 .banner__down-btn {
@@ -87,4 +101,43 @@
   border: none;
   cursor: pointer;
 }
+
+.banner__down-btn:active {
+  outline: none !important;
+}
+
+.banner__down-btn_svg {
+  fill: transparent;
+}
+
+.banner__down-btn_svg circle {
+  stroke: #ffffff;
+}
+
+.banner__down-btn_svg rect {
+  fill: #ffffff;
+  transition: all 0.3s;
+}
+
+.banner__down-btn_svg:hover circle {
+  fill: #ffffff;
+}
+
+.banner__down-btn_svg:hover rect {
+  fill: #6c0287;
+}
+
+.banner__down-btn_svg:active circle {
+  fill: #6c0287;
+  stroke: #6c0287;
+}
+
+.banner__down-btn_svg:active rect {
+  fill: #ffffff;
+}
+
+.banner__down-btn:focus {
+  outline: 2px solid #cd06ff;
+}
+
 

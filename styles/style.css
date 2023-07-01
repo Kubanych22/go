@@ -41,6 +41,10 @@ img, svg {
   object-fit: contain;
 }
 
+button {
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: fixed;
   transform: scale(0);
@@ -63,7 +67,6 @@ body {
 .main__section {
   padding: 50px 0;
 }
-
 
 .footer {
   padding-bottom: 0;

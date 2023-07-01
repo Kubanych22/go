@@ -12,25 +12,28 @@
   text-transform: uppercase;
 }
 
-.header__logo {
-
-}
-
-.navigation {
-
-}
-
 .navigation__list {
   display: flex;
   gap: 40px;
 }
 
-.navigation__item {
-
+.navigation__link {
+  padding: 2px 5px;
+  transition: background-color 0.3s;
 }
 
-.navigation__link {
+.navigation__link:hover {
+  background-color: #6c0287;
+}
 
+.navigation__link:focus {
+  background-color: #6c0287;
+  outline: none;
+}
+
+.navigation__link:active {
+  border: 1px solid #000000;
+  background-color: #640aa3;
 }
 
 .header__order-btn {
@@ -41,4 +44,17 @@
   background-color: transparent;
   border-radius: 10px;
   border: 3px solid #cd06ff;
+  transition: background-color 0.3s;
+}
+
+.header__order-btn:hover,
+.header__order-btn:focus {
+  background-color: #6c0287;
+  border: 3px solid #6c0287;
+  outline: none;
+}
+
+.header__order-btn:active {
+  border: 1px solid #000;
+  background-color: #640aa3;
 }

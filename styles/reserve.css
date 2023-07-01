@@ -39,12 +39,20 @@
   margin-bottom: 40px;
 }
 
+.inner__field {
+  margin-bottom: 0;
+}
+
 .inner-field__title {
   margin-bottom: 24px;
 }
 
-.inner__field {
-  margin-bottom: 0;
+.inner__field .form__input:focus {
+  outline: 1px solid #cd06ff;
+}
+
+.inner__field .form__input:checked:active {
+  background-color:  #cd06ff;
 }
 
 .form__field_list {
@@ -74,7 +82,18 @@
 .choice:hover {
   border-color: #640aa3;
   background-color: #eadeed;
+}
+
+.choice:focus {
+  border-color: #640aa3;
+  background-color: #ffffff;
   transform: scale(1.05);
+  outline: none;
+}
+
+.choice:active {
+  border-color: #ffffff;
+  background-color: #6c0287;
 }
 
 .choice[value] {
@@ -84,6 +103,10 @@
   color: #000;
   text-align: center;
   text-transform: uppercase;
+}
+
+.choice[value]:active {
+  color: #ffffff;
 }
 
 .form__field-container, .last {
@@ -115,6 +138,11 @@
   padding: 12px;
 }
 
+.last__item .form__input:focus {
+  outline: none;
+  border: 2px solid #cd06ff;
+}
+
 .last__item-wrapper {
   flex-basis: 134px;
   display: flex;
@@ -131,6 +159,7 @@
 
 .form__btn {
   display: block;
+  max-width: 294px;
   margin-left: auto;
   padding: 16px 50px;
   font-size: 22px;
@@ -138,4 +167,23 @@
   line-height: 28px;
   color: #6C0287;
   text-transform: uppercase;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  transition: background-color, border 0.3s;
+}
+
+.form__btn:hover {
+  background-color: #eadeed;
+  border: 3px solid #6c0287;
+}
+
+.form__btn:focus {
+  background-color: #ffffff;
+  border: 3px solid #6c0287;
+  outline: none;
+}
+
+.form__btn:active {
+  background-color: #eadeed;
+  border: none;
 }
