@@ -100,6 +100,11 @@
   background-color: inherit;
   border: none;
   cursor: pointer;
+  transition: outline 0.2s;
+}
+
+.banner__down-btn:focus {
+  outline: 2px solid #cd06ff;
 }
 
 .banner__down-btn:active {
@@ -112,6 +117,7 @@
 
 .banner__down-btn_svg circle {
   stroke: #ffffff;
+  transition: all 0.3s;
 }
 
 .banner__down-btn_svg rect {
@@ -136,8 +142,5 @@
   fill: #ffffff;
 }
 
-.banner__down-btn:focus {
-  outline: 2px solid #cd06ff;
-}
 
 

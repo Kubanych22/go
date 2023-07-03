@@ -39,21 +39,6 @@
   margin-bottom: 40px;
 }
 
-.inner__field {
-  margin-bottom: 0;
-}
-
-.inner-field__title {
-  margin-bottom: 24px;
-}
-
-.inner__field .form__input:focus {
-  outline: 1px solid #cd06ff;
-}
-
-.inner__field .form__input:checked:active {
-  background-color:  #cd06ff;
-}
 
 .form__field_list {
   padding-top: 10px;
@@ -111,18 +96,28 @@
   border-color: #ffffff;
 }
 
-/*.choice[value] {*/
-/*  font-size: 30px;*/
-/*  font-weight: 700;*/
-/*  line-height: 40px;*/
-/*  color: #000;*/
-/*  text-align: center;*/
-/*  text-transform: uppercase;*/
-/*}*/
+.choice:checked + .choice__form-label {
+  color: #ffffff;
+  background-color: #6c0287;
+  border-color: #ffffff;
+}
 
-/*.choice[value]:active {*/
-/*  color: #ffffff;*/
-/*}*/
+.inner__field {
+  margin-bottom: 0;
+}
+
+.inner-field__title {
+  margin-bottom: 24px;
+}
+
+.inner__field .form__input:focus {
+  outline: 1px solid #cd06ff;
+}
+
+.inner__field .form__input:checked:active {
+  background-color:  #cd06ff;
+}
+
 
 .form__field-container, .last {
   margin: 40px 40px;

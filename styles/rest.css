@@ -17,6 +17,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 380px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.rest__item:hover {
+  transform: scale(1.1);
 }
 
 .rest__text {
