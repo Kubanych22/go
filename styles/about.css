@@ -41,7 +41,7 @@
 
 .about__creator-quote span {
   display: inline-block;
-  color: #6c0287;
+  color: var(--color-bg-hover-primery);
   margin: 0 10px 0 5px;
 }
 

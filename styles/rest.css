@@ -21,6 +21,11 @@
   transition: transform 0.3s;
 }
 
+.rest__item:nth-child(3n + 2) {
+  position: relative;
+  top: 70px;
+}
+
 .rest__item:hover {
   transform: scale(1.1);
 }

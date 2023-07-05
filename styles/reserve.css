@@ -1,5 +1,5 @@
 .reserve {
-  background-color: #440f51;
+  background-color: var(--color-bg-second);
 }
 
 .reserve__title {
@@ -69,8 +69,8 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 40px;
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--color-text-black);
+  background-color: var(--color-text-main);
   text-align: center;
   text-transform: uppercase;
   border-radius: 8px;
@@ -79,27 +79,27 @@
 }
 
 .choice + .choice__form-label:hover {
-  border-color: #640aa3;
-  background-color: #eadeed;
+  border-color: var(--color-bg-hover-second);
+  background-color: var(--color-bg-hover-third);
 }
 
 .choice:focus + .choice__form-label {
-  border-color: #640aa3;
-  background-color: #ffffff;
+  border-color: var(--color-bg-hover-second);
+  background-color: var(--color-text-main);
   transform: scale(1.05);
   outline: none;
 }
 
 .choice + .choice__form-label:active {
-  color: #ffffff;
-  background-color: #6c0287;
-  border-color: #ffffff;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-hover-primery);
+  border-color: var(--color-text-main);
 }
 
 .choice:checked + .choice__form-label {
-  color: #ffffff;
-  background-color: #6c0287;
-  border-color: #ffffff;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-hover-primery);
+  border-color: var(--color-text-main);
 }
 
 .inner__field {
@@ -111,11 +111,11 @@
 }
 
 .inner__field .form__input:focus {
-  outline: 1px solid #cd06ff;
+  outline: 1px solid var(--color-text-second);
 }
 
 .inner__field .form__input:checked:active {
-  background-color:  #cd06ff;
+  background-color:  var(--color-text-second);
 }
 
 
@@ -150,7 +150,7 @@
 
 .last__item .form__input:focus {
   outline: none;
-  border: 2px solid #cd06ff;
+  border: 2px solid var(--color-text-second);
 }
 
 .last__item-wrapper {
@@ -175,7 +175,7 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 28px;
-  color: #6C0287;
+  color: var(--color-bg-hover-primery);
   text-transform: uppercase;
   border-radius: 10px;
   border: 3px solid transparent;
@@ -184,12 +184,12 @@
 
 .form__btn:hover {
   background-color: #eadeed;
-  border: 3px solid #6c0287;
+  border: 3px solid var(--color-bg-hover-primery);
 }
 
 .form__btn:focus {
-  background-color: #ffffff;
-  border: 3px solid #6c0287;
+  background-color: var(--color-text-main);
+  border: 3px solid var(--color-bg-hover-primery);
   outline: none;
 }
 

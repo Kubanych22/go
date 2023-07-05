@@ -1,4 +1,5 @@
 @import "normalize.css";
+@import "variables.css";
 @import "style.css";
 @import "header.css";
 @import "banner.css";

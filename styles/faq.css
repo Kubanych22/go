@@ -3,8 +3,8 @@
 
 .faq__item {
   position: relative;
-  background-color: #ffffff;
-  color: #1c1a1a;
+  background-color: var(--color-text-main);
+  color: var(--color-text-faq);
   font-weight: 700;
   font-size: 24px;
   padding: 30px 70px;
@@ -19,8 +19,8 @@
 }
 
 .faq__item:nth-child(2n) {
-  color: #ffffff;
-  background-color: #440f51;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-second);
 }
 
 .faq__question {
@@ -59,7 +59,7 @@
 
 .faq__question-btn:hover:after,
 .faq__question-btn:focus:after {
-  background-color: #6c0287;
+  background-color: var(--color-bg-hover-primery);
   background-image: url("../img/open-purple-hover.svg");
 }
 

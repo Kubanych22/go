@@ -33,7 +33,7 @@
   font-size: 100px;
   font-weight: 900;
   line-height: 141px;
-  color: #cd06ff;
+  color: var(--color-text-second);
 }
 
 .features__thematic-halls_text {
@@ -47,7 +47,7 @@
   font-weight: 900;
   line-height: 106px;
   font-variant: all-small-caps;
-  color: #cd06ff;
+  color: var(--color-text-second);
 }
 
 .features__latest-equipment_text {
@@ -69,8 +69,8 @@
   font-size: 26px;
   font-weight: 700;
   line-height: 30px;
-  color: #ffffff;
-  background-color: #6c0287;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-hover-primery);
   text-transform: uppercase;
   border-radius: 10px;
   border: none;
@@ -79,16 +79,16 @@
 }
 
 .banner__book:hover {
-  background-color: #840aa3;
+  background-color: var(--color-element-states);
 }
 
 .banner__book:focus {
-  background-color: #840aa3;
+  background-color: var(--color-element-states);
   outline: none;
 }
 
 .banner__book:active {
-  background-color: #640aa3;
+  background-color: var(var(--color-bg-hover-second));
 }
 
 .banner__down-btn {
@@ -104,7 +104,7 @@
 }
 
 .banner__down-btn:focus {
-  outline: 2px solid #cd06ff;
+  outline: 2px solid var(--color-text-second);
 }
 
 .banner__down-btn:active {
@@ -116,30 +116,30 @@
 }
 
 .banner__down-btn_svg circle {
-  stroke: #ffffff;
+  stroke: var(--color-text-main);
   transition: all 0.3s;
 }
 
 .banner__down-btn_svg rect {
-  fill: #ffffff;
+  fill: var(--color-text-main);
   transition: all 0.3s;
 }
 
 .banner__down-btn_svg:hover circle {
-  fill: #ffffff;
+  fill: var(--color-text-main);
 }
 
 .banner__down-btn_svg:hover rect {
-  fill: #6c0287;
+  fill: var(--color-bg-hover-primery);
 }
 
 .banner__down-btn_svg:active circle {
-  fill: #6c0287;
-  stroke: #6c0287;
+  fill: var(--color-bg-hover-primery);
+  stroke: var(--color-bg-hover-primery);
 }
 
 .banner__down-btn_svg:active rect {
-  fill: #ffffff;
+  fill: var(--color-text-main);
 }
 
 

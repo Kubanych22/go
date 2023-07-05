@@ -2,7 +2,7 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
-  background: linear-gradient(180deg, #1B1A1B 0%, #370A37 100%);
+  background: linear-gradient(180deg, var(--colog-bg-main) 0%, var(--color-bg-contacts-gradient) 100%);
 }
 
 .contacts__icon:nth-of-type(2n - 1) {
@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  fill: #cd06ff;
+  fill: var(--color-text-second);
 }
 
 .contacts__icon-link svg {
@@ -45,7 +45,7 @@
   display: block;
   width: 50px;
   height: 50px;
-  color: #ffffff;
+  color: var(--color-text-main);
   border-radius: 50%;
   outline: 1px solid transparent;
   outline-offset: 3px;
@@ -55,15 +55,15 @@
 }
 
 .social__link:hover {
-  color: #cd06ff;
+  color: var(--color-text-second);
 }
 
 .social__link:focus {
-  outline-color: #cd06ff;
+  outline-color: var(--color-text-second);
 }
 
 .social__link:active {
-  color: #840aa3;
+  color: var(--color-element-states);
 }
 
 .footer__container {
