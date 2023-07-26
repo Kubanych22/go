@@ -1,20 +1,19 @@
-.halls {
+.other-rooms {
   padding-top: 50px;
   padding-bottom: 100px;
 }
 
-.halls__title {
+.other-rooms__title {
   margin-bottom: 60px;
 }
 
-.halls__list {
+.other-rooms__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
-.halls__item {
+.other-rooms__item {
   min-height: 349px;
   font-size: 70px;
   font-weight: 700;
@@ -25,30 +24,30 @@
   background-position: center;
 }
 
-.halls__item:nth-of-type(1) .halls__link {
+.other-rooms__item:nth-of-type(1) .other-rooms__link {
   background-image: url("../img/hall-1.jpg");
 }
 
-.halls__item:nth-of-type(2) .halls__link {
+.other-rooms__item:nth-of-type(2) .other-rooms__link {
   background-image: url("../img/hall-2.jpg");
 }
 
-.halls__item:nth-of-type(3) .halls__link {
+.other-rooms__item:nth-of-type(3) .other-rooms__link {
   background-image: url("../img/hall-3.jpg");
 }
 
-.halls__item:nth-of-type(4) .halls__link {
+.other-rooms__item:nth-of-type(4) .other-rooms__link {
   background-image: url("../img/hall-4.jpg");
 }
 
-.halls__link {
+.other-rooms__link {
   display: block;
   width: 100%;
   height: 100%;
   padding-top: 98px;
 }
 
-.halls__name {
+.other-rooms__name {
   max-width: 252px;
   margin: 0 auto;
   padding-left: 20px;
@@ -56,60 +55,60 @@
 }
 
 @media (max-width: 1024px) {
-  .halls {
+  .other-rooms {
     padding-top: 35px;
-    padding-bottom: 71px;
+    padding-bottom: 47px;
   }
-  .halls__item {
+  .other-rooms__item {
     min-height: 267px;
     font-size: 50px;
     line-height: 60px;
   }
 
-  .halls__link {
+  .other-rooms__link {
     padding-top: 75px;
   }
 }
 
 @media (max-width: 768px) {
-  .halls {
+  .other-rooms {
     padding-top: 30px;
-    padding-bottom: 62px;
+    padding-bottom: 35px;
   }
 
-  .halls__item {
+  .other-rooms__item {
     min-height: 200px;
     font-size: 40px;
     line-height: 50px;
   }
 
-  .halls__link {
+  .other-rooms__link {
     padding-top: 50px;
   }
 }
 
 @media (max-width: 480px) {
-  .halls {
+  .other-rooms {
     padding-top: 30px;
-    padding-bottom: 0;
+    padding-bottom: 22px;
   }
 
-  .halls__title {
+  .other-rooms__title {
     margin-bottom: 25px;
   }
 
-  .halls__list {
+  .other-rooms__list {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  .halls__item {
+  .other-rooms__item {
     height: 168px;
     font-size: 40px;
     line-height: 50px;
   }
 
-  .halls__link {
+  .other-rooms__link {
     padding-top: 50px;
   }
 }

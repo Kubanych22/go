@@ -7,7 +7,7 @@
 }
 
 .form {
-  padding-bottom: 30px;
+  padding-bottom: 80px;
 }
 
 .form__label {
@@ -23,7 +23,7 @@
 }
 
 .form__field {
-  margin-bottom: 68px;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -39,8 +39,7 @@
   margin-bottom: 40px;
 }
 
-
-.form__field_list {
+.form__list {
   padding-top: 10px;
   width: 100%;
   display: flex;
@@ -48,13 +47,13 @@
   gap: 60px;
 }
 
-.form__field_item {
+.form__item {
   max-width: 250px;
 }
 
-.form__input {
+input {
   display: block;
-  width: 100%;
+  max-width: 100%;
   border: none;
 }
 
@@ -64,7 +63,7 @@
   opacity: 0;
 }
 
-.choice + .choice__form-label {
+.choice + .label {
   padding: 7px 15px 8px;
   font-size: 30px;
   font-weight: 700;
@@ -78,31 +77,37 @@
   transition: all 0.3s;
 }
 
-.choice + .choice__form-label:hover {
+.choice + .label:hover {
   border-color: var(--color-bg-hover-second);
   background-color: var(--color-bg-hover-third);
 }
 
-.choice:focus + .choice__form-label {
+.choice:focus + .label {
   border-color: var(--color-bg-hover-second);
   background-color: var(--color-text-main);
   transform: scale(1.05);
   outline: none;
 }
 
-.choice + .choice__form-label:active {
+.choice + .label:active {
   color: var(--color-text-main);
   background-color: var(--color-bg-hover-primery);
   border-color: var(--color-text-main);
 }
 
-.choice:checked + .choice__form-label {
+.choice:checked + .label {
   color: var(--color-text-main);
   background-color: var(--color-bg-hover-primery);
   border-color: var(--color-text-main);
 }
 
-.inner__field {
+.field-container__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.inner-field {
   margin-bottom: 0;
 }
 
@@ -110,67 +115,88 @@
   margin-bottom: 24px;
 }
 
-.inner__field .form__input:focus {
+.inner-field .form__input:focus {
   outline: 1px solid var(--color-text-second);
 }
 
-.inner__field .form__input:checked:active {
+.inner-field .form__input:checked:active {
   background-color:  var(--color-text-second);
 }
 
+.field-container {
+  margin: 60px 40px;
+}
 
-.form__field-container, .last {
-  margin: 40px 40px;
+.last {
+  margin: 60px 40px 0;
 }
 
 .last__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 36px;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  /*grid-template-rows: 1fr 1fr 1fr;*/
+  grid-template-areas:
+    "date-time name phone"
+    "people last-name email"
+    ". . btn";
+  align-items: end;
+  gap: 36px 50px;
 }
 
-.last_item {
-  flex-basis: 280px;
-  height: 68px;
+.last__item label {
+  display: flex;
+  flex-direction: column;
   font-size: 14px;
   line-height: 16px;
 }
 
-.last__item .form__label {
-  display: flex;
-  flex-direction: column;
-}
-
-.last__item .form__input {
+.last__item input {
   height: 52px;
   padding: 12px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28;
 }
 
-.last__item .form__input:focus {
+.control__input:focus {
   outline: none;
   border: 2px solid var(--color-text-second);
 }
 
-.last__item-wrapper {
-  flex-basis: 134px;
+.date-time {
+  grid-area: date-time;
   display: flex;
-  gap: 36px 20px;
+  gap: 0 14px;
 }
 
-.last__item-wrapper .form__input[type="date"] {
-  width: 140px;
+.layout-name {
+  grid-area: name;
 }
 
-.last__item-wrapper .form__input[type="time"] {
-  width: 134px;
+.layout-phone {
+  grid-area: phone;
+}
+
+.layout-number {
+  grid-area: people;
+}
+
+.layout-last-name {
+  grid-area: last-name;
+}
+
+.layout-email {
+  grid-area: email;
+}
+
+.button-control {
+  grid-area: btn;
 }
 
 .form__btn {
   display: block;
-  max-width: 294px;
-  margin-left: auto;
+  margin-top: 40px;
   padding: 16px 50px;
   font-size: 22px;
   font-weight: 700;
@@ -196,4 +222,213 @@
 .form__btn:active {
   background-color: #eadeed;
   border: none;
+}
+
+@media (max-width: 1200px) {
+  .form__label {
+    font-size: 21px;
+  }
+
+  .choice + .label {
+    padding: 7px 15px 8px;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reserve__title {
+    padding-top: 60px;
+  }
+
+  .form {
+    padding-bottom: 60px;
+  }
+
+  .field-container {
+    margin: 60px 0;
+  }
+
+ .last {
+   margin: 60px 0 0 0;
+ }
+
+  .last__list {
+    grid-template-columns: repeat(auto-fit, 267px);
+  }
+
+  .layout-name {
+    max-width: 251px;
+  }
+
+  .layout-phone {
+    max-width: 254px;
+  }
+
+  .layout-number {
+    max-width: 300px;
+  }
+
+  .layout-last-name {
+    max-width: 251px;
+  }
+
+  .layout-email {
+    max-width: 254px;
+  }
+
+  .button-control {
+    max-width: 254px;
+  }
+
+  .date-time {
+    width: 267px;
+  }
+
+  .date-time__input {
+    width: 126px;
+  }
+
+  .form__btn {
+    margin-top: 50px;
+    width: 254px;
+    padding: 14px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reserve__title {
+    padding-top: 50px;
+  }
+
+  .form__legend-title {
+    margin-bottom: 26px;
+  }
+
+  .choice {
+    width: 150px;
+  }
+
+  .choice + .label {
+    padding: 9px 20px 9px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .form__list {
+    gap: 29px;
+  }
+
+  .inner-field .form__label {
+    width: 214px;
+  }
+
+  .field-container__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 60px;
+  }
+
+  .layout-name {
+    max-width: 264px;
+  }
+
+  .last__list {
+    grid-template-areas:
+    "date-time people"
+    "name phone"
+    "last-name email"
+    ".  btn";
+    align-items: end;
+    gap: 36px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reserve__title {
+    padding-top: 50px;
+  }
+
+  .form__legend-title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .choice {
+    width: 130px;
+  }
+
+  .choice + .label {
+    padding: 6px 20px 6px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .form__list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 29px;
+  }
+
+  .inner-field .form__label {
+    width: 214px;
+  }
+
+  .field-container__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 60px;
+  }
+
+  .last__list {
+    grid-template-areas:
+    "date-time"
+    "people"
+    "name"
+    "last-name"
+    "phone"
+    "email"
+    "btn";
+    align-items: end;
+    gap: 20px;
+  }
+
+  .date-time__label {
+    margin-bottom: 15px;
+  }
+
+  .layout-name {
+    max-width: 280px;
+  }
+
+  .layout-phone {
+    max-width: 280px;
+  }
+
+  .layout-number {
+    max-width: 280px;
+  }
+
+  .layout-last-name {
+    max-width: 280px;
+  }
+
+  .layout-email {
+    max-width: 280px;
+  }
+
+  .button-control {
+   justify-self: center;
+  }
+
+  .form__btn {
+    max-width: 280px;
+    margin-top: 35px;
+  }
+
+  .date-time__input {
+    width: 127px;
+  }
 }

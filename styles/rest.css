@@ -1,3 +1,10 @@
+.rest {
+  padding-top: 50px;
+  padding-bottom: 118px;
+  --card-count: 3;
+  --gap: 20px;
+}
+
 .rest__title {
   max-width: 980px;
 }
@@ -9,14 +16,14 @@
 }
 
 .rest__item {
-  flex-basis: 380px;
+  flex-basis: calc(100% / var(--card-count) - (var(--gap) * (var(--card-count) - 1)) / var(--card-count));
   height: 228px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 380px;
+  background-size: 100%;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -31,7 +38,7 @@
 }
 
 .rest__text {
-  margin: 0 40px 34px;
+  padding: 0 40px 34px;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -43,10 +50,6 @@
 
 .rest__item_audio {
   background-image: url("../img/audio-systems.jpg");
-}
-
-.rest__item_audio .rest__text {
-  margin-bottom: 0;
 }
 
 .rest__item_karaoke {
@@ -61,10 +64,86 @@
   background-image: url("../img/movie-services.jpg");
 }
 
-.rest__item_services .rest__text {
-  margin-bottom: 0;
-}
-
 .rest__item_play {
   background-image: url("../img/plаy-stаtiоn-5.jpg");
+}
+
+@media (max-width: 1024px) {
+  .rest {
+    padding-top: 42px;
+    padding-bottom: 90px;
+  }
+
+  .rest__title {
+    max-width: 904px;
+  }
+
+  .rest__list {
+    gap: 30px 20px;
+  }
+
+  .rest__item {
+    width: 334px;
+    height: 200px;
+  }
+
+  .rest__item:nth-child(3n + 2) {
+    top: 54px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rest {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    --card-count: 2;
+  }
+
+  .rest__title {
+    padding-top: 30px;
+    max-width: 100%;
+  }
+
+  .rest__list {
+    gap: 20px;
+  }
+
+  .rest__item {
+    flex-basis: calc(100% / var(--card-count) - (var(--gap) * (var(--card-count) - 1)) / var(--card-count));
+    height: 200px;
+  }
+
+  .rest__item:nth-child(3n + 2) {
+    top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .rest {
+    padding-top: 25px;
+  }
+
+  .rest__title {
+    padding-top: 0;
+  }
+
+  .rest__list {
+    gap: 10px;
+  }
+
+  .rest__item {
+    height: 75px;
+  }
+
+  .rest__item_services .rest__text {
+    margin-bottom: 3px;
+  }
+
+  .rest__text {
+    max-width: 115px;
+    padding: 0;
+    margin: 30px auto;
+    font-size: 10px;
+    line-height: 14px;
+  }
 }

@@ -1,12 +1,16 @@
+.footer__contacts {
+  padding-top: 50px;
+}
+
 .contacts {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   background: linear-gradient(180deg, var(--colog-bg-main) 0%, var(--color-bg-contacts-gradient) 100%);
 }
 
 .contacts__icon:nth-of-type(2n - 1) {
-  margin-bottom: 39px;
+  margin-bottom: 40px;
 }
 .contacts__icon:nth-of-type(2n) {
   margin-bottom: 11px;
@@ -67,7 +71,7 @@
 }
 
 .footer__container {
-  margin-bottom: 156px;
+  margin-bottom: 145px;
   display: flex;
   justify-content: space-between;
 }
@@ -80,7 +84,7 @@
   line-height: 16px;
 }
 
-.footer__copyright_designer {
+.copyright__designer {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -88,6 +92,119 @@
   text-align: right;
 }
 
-.footer__copyright_designer-email {
+.copyright__designer-email {
   display: block;
+}
+
+@media (max-width: 1024px) {
+  .footer__contacts {
+    padding-top: 35px;
+  }
+
+  .footer__container {
+    margin-bottom: 92px;
+  }
+
+  .contacts__icon-link {
+    gap: 13px;
+  }
+
+  .contacts__icon-link svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .contacts__map {
+    width: 542px;
+    height: 274px;
+  }
+
+  .social__link {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__contacts {
+    padding-top: 35px;
+  }
+
+  .footer__container {
+    margin-bottom: 75px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .contacts {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .contacts__icon-link {
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contacts__map {
+    width: 688px;
+    margin: 0 auto;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .footer__contacts {
+    padding-top: 15px;
+  }
+
+  .footer__container {
+    gap: 35px;
+    margin-bottom: 63px;
+  }
+
+  .contacts {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer__copyright {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 19px;
+  }
+
+  .copyright__name-company {
+    width: 120px;
+    margin: 0 auto;
+  }
+
+  .copyright__designer {
+    width: 150px;
+    align-items: center;
+  }
+
+  .copyright__designer-email {
+    margin: 0 auto;
+  }
 }

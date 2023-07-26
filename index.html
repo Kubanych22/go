@@ -9,69 +9,73 @@
   <link rel="icon" type="image/png" href="img/logo.png">
   <link rel="stylesheet" href="styles/index.css">
 
-  <title>Модуль 3. Проект Go</title>
+  <title>Модуль 3. Итоговая работа - проект Go</title>
 </head>
 
 <body>
 <header class="header">
   <div class="container header__container">
+    <button class="burger" type="button">
+      <span class="burger__line burger-long"></span>
+      <span class="burger__line burger-long"></span>
+      <span class="burger__line burger-short"></span>
+    </button>
     <img class="header__logo" src="img/logo.svg" alt="логотип">
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__link" href="#">залы</a>
+          <a class="navigation__link" href="#halls">залы</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">О нас</a>
+          <a class="navigation__link" href="#about">О нас</a>
+        </li>
+        <li class="navigation__item navigation__item-scroll">
+          <a class="navigation__link" href="#reserve">Бронь</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Бронь</a>
+          <a class="navigation__link" href="#reviews">отзывы</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">отзывы</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Контакты</a>
+          <a class="navigation__link" href="#contacts">Контакты</a>
         </li>
       </ul>
     </nav>
     <button class="header__order-btn" type="button">Заказать звонок</button>
   </div>
 </header>
-<main class="main">
-  <section class="main__section banner">
+
+<main>
+  <section class="banner">
     <div class="container">
       <h1 class="banner__title">GAME OVER</h1>
       <p class="banner__description">Новый формат игр и отдыха</p>
       <div class="banner__new-features features">
-        <div class="features__thematic-halls">
-          <p class="features__thematic-halls_number">4</p>
-          <p class="features__thematic-halls_text">Тематических зала</p>
+        <div class="features__halls">
+          <p class="features__halls-number">4</p>
+          <p class="features__halls-text">Тематических <span>зала</span></p>
         </div>
-        <div class="features__latest-equipment">
-          <p class="features__latest-equipment_new">New</p>
-          <p class="features__latest-equipment_text">Новейшая аппаратура</p>
+        <div class="features__equipment">
+          <p class="features__equipment-new">New</p>
+          <p class="features__equipment-text">Новейшая аппаратура</p>
         </div>
       </div>
-      <div class="banner__btns">
-        <button class="banner__book" type="button">Забронировать</button>
-        <button class="banner__down-btn" type="button">
-          <svg class="banner__down-btn_svg" width="97" height="97" viewBox="0 0 97 97" fill="currentColor"
-               xmlns="http://www.w3.org/2000/svg">
-            <circle cx="48.5" cy="48.5" r="48"/>
-            <rect x="34.4255" y="43.9162" width="1.82001" height="20.0201"
-                  transform="rotate(-44.9975 34.4255 43.9162)"/>
-            <rect x="48.5807" y="58.0737" width="1.82001" height="20.0201"
-                  transform="rotate(-134.997 48.5807 58.0737)"/>
-          </svg>
-        </button>
-      </div>
+      <button class="banner__book" type="button">Забронировать</button>
+      <a class="banner__down" href="#rest">
+        <svg class="banner__down-svg" width="97" height="97" viewBox="0 0 97 97" fill="currentColor"
+             xmlns="http://www.w3.org/2000/svg">
+          <circle cx="48.5" cy="48.5" r="48"/>
+          <rect x="34.4255" y="43.9162" width="1.82001" height="20.0201"
+                transform="rotate(-44.9975 34.4255 43.9162)"/>
+          <rect x="48.5807" y="58.0737" width="1.82001" height="20.0201"
+                transform="rotate(-134.997 48.5807 58.0737)"/>
+        </svg>
+      </a>
     </div>
   </section>
 
-  <section class="main__section rest">
+  <section class="rest">
     <div class="container">
-      <h2 class="rest__title title">У нас есть все для классного<br>отдыха с друзьями!</h2>
+      <h2 class="rest__title title" id="rest">У нас есть все для классного<br>отдыха с друзьями!</h2>
       <ul class="rest__list">
         <li class="rest__item rest__item_glass">
           <p class="rest__text">VR очки</p>
@@ -95,58 +99,66 @@
     </div>
   </section>
 
-  <section class="main__section halls">
+  <section class="halls">
     <div class="container">
-      <h2 class="halls__title title">Наши залы</h2>
+      <h2 class="halls__title title" id="halls">Наши залы</h2>
       <ul class="halls__list">
         <li class="halls__item">
-          <p class="halls__text">80`s vibes</p>
+          <a class="halls__link" href="vibes-80.html">
+            <p class="halls__name">80`s vibes</p>
+          </a>
         </li>
         <li class="halls__item">
-          <p class="halls__text">Star wars</p>
+          <a class="halls__link" href="star-wars.html">
+            <p class="halls__name">Star wars</p>
+          </a>
         </li>
         <li class="halls__item">
-          <p class="halls__text">Wild west</p>
+          <a class="halls__link" href="wild-west.html">
+            <p class="halls__name">Wild west</p>
+          </a>
         </li>
         <li class="halls__item">
-          <p class="halls__text">Neon style</p>
+          <a class="halls__link" href="neon-style.html">
+            <p class="halls__name">Neon style</p>
+          </a>
         </li>
       </ul>
     </div>
   </section>
 
-  <section class="main__section reserve">
+  <section class="reserve">
     <div class="container">
       <h2 class="reserve__title title">Забронировать зал просто</h2>
 
-      <form class="reserve__form form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+      <form class="reserve__form form" action="https://jsonplaceholder.typicode.com/posts" method="post" id="reserve">
         <fieldset class="form__field">
           <legend class="form__legend-title">Выбери зал</legend>
-          <ul class="form__field_list">
-            <li class="form__field_item">
+          <ul class="form__list">
+            <li class="form__item">
               <input class="form__input choice" type="radio" name="halls" id="vibes" value="80`s vibes">
-              <label class="choice__form-label" for="vibes">80`s vibes</label>
+              <label class="label" for="vibes">80`s vibes</label>
             </li>
-            <li class="form__field_item">
+            <li class="form__item">
               <input class="form__input choice" type="radio" name="halls" id="wars" value="Star wars" checked>
-              <label class="choice__form-label" for="wars">Star wars</label>
+              <label class="label" for="wars">Star wars</label>
             </li>
-            <li class="form__field_item">
+            <li class="form__item">
               <input class="form__input choice" type="radio" name="halls" id="west" value="Wild west">
-              <label class="choice__form-label" for="west">Wild west</label>
+              <label class="label" for="west">Wild west</label>
             </li>
-            <li class="form__field_item">
+            <li class="form__item">
               <input class="form__input choice" type="radio" name="halls" id="style" value="Neon style">
-              <label class="choice__form-label" for="style">Neon style</label>
+              <label class="label" for="style">Neon style</label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="form__field form__field-container">
+        <fieldset class="form__field field-container">
           <legend class="form__legend-title">Собери набор развлечений</legend>
-          <ul class="form__field_list">
-            <li class="form__field_item">
-              <fieldset class="form__field inner__field">
+          <ul class="field-container__list">
+            <li class="field-container__item">
+              <fieldset class="form__field inner-field">
                 <legend class="form__legend-title inner-field__title">Приставка:</legend>
                 <label class="form__label">
                   <input class="form__input" type="radio" name="box" value="PlayStation">
@@ -166,8 +178,9 @@
                 </label>
               </fieldset>
             </li>
-            <li class="form__field_item">
-              <fieldset class="form__field inner__field">
+
+            <li class="field-container__item">
+              <fieldset class="form__field inner-field">
                 <legend class="form__legend-title inner-field__title">Настольные игры:</legend>
                 <label class="form__label">
                   <input class="form__input" type="checkbox" name="jenga" value="Jenga">
@@ -187,8 +200,9 @@
                 </label>
               </fieldset>
             </li>
-            <li class="form__field_item">
-              <fieldset class="form__field inner__field">
+
+            <li class="field-container__item">
+              <fieldset class="form__field inner-field">
                 <legend class="form__legend-title inner-field__title">Дополнительно:</legend>
                 <label class="form__label">
                   <input class="form__input" type="checkbox" name="karaoke" value="karaoke">
@@ -202,96 +216,100 @@
             </li>
           </ul>
         </fieldset>
+
         <fieldset class="form__field last">
           <legend class="form__legend-title">Выбери дату и время</legend>
           <ul class="last__list">
             <li class="last__item">
-              <div class="last__item-wrapper">
-                <label class="form__label" for="date">
-                  <input class="form__input" type="date" name="date" id="date" required>
+              <div class="last__item-wrapper date-time">
+                <label class="date-time__label" for="date">
+                  <input class="date-time__input" type="date" name="date" id="date" required>
                 </label>
-                <label class="form__label" for="time">
-                  <input class="form__input" type="time" name="time" id="time" required>
+                <label class="date-time__label" for="time">
+                  <input class="date-time__input" type="time" name="time" id="time" required>
                 </label>
               </div>
             </li>
-            <li class="last__item">
-              <label class="form__label" for="name">Имя
-                <input class="form__input" type="text" name="name" id="name" required>
+
+            <li class="last__item control layout-name">
+              <label class="control__label" for="name">Имя
+                <input class="control__input" type="text" name="name" id="name" required>
               </label>
             </li>
-            <li class="last__item">
-              <label class="form__label" for="phone">Номер телефона
-                <input class="form__input" type="tel" name="phone" id="phone" required>
+
+            <li class="last__item control layout-phone">
+              <label class="control__label" for="phone">Телефон
+                <input class="control__input" type="tel" name="phone" id="phone" required>
               </label>
             </li>
-            <li class="last__item">
-              <label class="form__label" for="number">Сколько человек
-                <input class="form__input" type="number" name="number" id="number" required>
+
+            <li class="last__item control layout-number">
+              <label class="control__label" for="number">
+                <input class="control__input" type="number" name="number" id="number" placeholder="Сколько человек"
+                       required>
               </label>
             </li>
-            <li class="last__item">
-              <label class="form__label" for="surname">Фамилия
-                <input class="form__input" type="text" name="surname" id="surname" required>
+
+            <li class="last__item control layout-last-name">
+              <label class="control__label" for="surname">Фамилия
+                <input class="control__input" type="text" name="surname" id="surname" required>
               </label>
             </li>
-            <li class="last__item">
-              <label class="form__label" for="email">E-mail
-                <input class="form__input" type="email" name="email" id="email" required>
+
+            <li class="last__item control layout-email">
+              <label class="control__label" for="email">E-mail
+                <input class="control__input" type="email" name="email" id="email" required>
               </label>
+            </li>
+            <li class="last__item control button-control">
+              <button class="form__btn" type="submit" form="reserve">Забронировать</button>
             </li>
           </ul>
         </fieldset>
-
-        <button class="form__field-container form__btn" type="submit">Забронировать</button>
       </form>
     </div>
   </section>
 
-  <section class="main__section about">
+  <section class="about">
     <div class="container">
-      <h2 class="about__title title">О нас</h2>
+      <h2 class="about__title title" id="about">О нас</h2>
       <div class="about__container">
         <img class="about__images" src="img/photos.jpg" alt="Фотографии с игровой территории"
              width="600" height="596">
-        <div class="about__wrapper">
-          <div class="about__text_wrapper">
-            <p class="about__text">Для наших гостей мы создали концептуально новое игровое пространство виртуальной
-              реальности в центральной части города.
-            </p>
+        <div class="about__text-wrapper">
+          <p class="about__text">Для наших гостей мы&nbsp;создали концептуально новое игровое пространство виртуальной
+            реальности в&nbsp;центральной части города.
+          </p>
+          <p class="about__text">Каждый день мы&nbsp;стараемся создавать для Вас самую лучшую игровую атмосферу и&nbsp;радовать
+            Вас топовыми игровыми разработками со&nbsp;всего мира.
+          </p>
+        </div>
 
-            <p class="about__text">Каждый день мы стараемся создавать для Вас самую лучшую игровую атмосферу и
-              радовать
-              Вас топовыми игровыми разработками со всего мира.
-            </p>
-          </div>
-
-          <div class="about__creator">
-            <blockquote class="about__creator_blockquote">
-              <p class="about__creator-quote"><span>&ldquo;</span>GAME OVER &mdash;<br>это место незабываемых
-                впечатлений<span>&rdquo;</span></p>
-              <cite class="about__creator-info">
-                <img class="about__creator-info-photo" src="img/boss.jpg" alt="Аркадий Абакшин,
+        <div class="about__creator">
+          <blockquote class="about__creator-blockquote">
+            <p class="about__creator-quote"><span>&ldquo;</span>GAME OVER &mdash; это место незабываемых
+              впечатлений<span>&rdquo;</span></p>
+            <cite class="about__creator-info">
+              <img class="about__creator-info-photo" src="img/boss.jpg" alt="Аркадий Абакшин,
 создатель игровой территории GAME OVER" width="80" height="80">
-                <span
-                  class="about__creator-info-text">Аркадий Абакшин,<br>создатель игровой<br>территории GAME OVER</span>
-              </cite>
-            </blockquote>
-          </div>
+              <span
+                class="about__creator-info-text">Аркадий Абакшин,<br>создатель игровой<br>территории GAME OVER</span>
+            </cite>
+          </blockquote>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="main__section reviews">
+  <section class="reviews">
     <div class="container">
-      <h2 class="reviews__title title">Отзывы посетителей</h2>
+      <h2 class="reviews__title title" id="reviews">Отзывы посетителей</h2>
       <div class="reviews__wrapper">
         <div class="reviews__person">
-          <div class="reviews__person_gradient">
-            <img class="reviews__person_photo" src="img/person-1.jpg" alt="Фотография первого посетителя">
+          <div class="reviews__person-gradient">
+            <img class="reviews__person-photo" src="img/person-1.jpg" alt="Фотография первого посетителя">
           </div>
-          <p class="reviews__person_name">
+          <p class="reviews__person-name">
             Макс Самойлов
           </p>
         </div>
@@ -302,10 +320,10 @@
       </div>
       <div class="reviews__wrapper">
         <div class="reviews__person">
-          <div class="reviews__person_gradient">
-            <img class="reviews__person_photo" src="img/person-2.jpg" alt="Фотография второго посетителя">
+          <div class="reviews__person-gradient">
+            <img class="reviews__person-photo" src="img/person-2.jpg" alt="Фотография второго посетителя">
           </div>
-          <p class="reviews__person_name">
+          <p class="reviews__person-name">
             Оксана Григорьева
           </p>
         </div>
@@ -316,10 +334,10 @@
       </div>
       <div class="reviews__wrapper">
         <div class="reviews__person">
-          <div class="reviews__person_gradient">
-            <img class="reviews__person_photo" src="img/person-3.jpg" alt="Фотография третьего посетителя">
+          <div class="reviews__person-gradient">
+            <img class="reviews__person-photo" src="img/person-3.jpg" alt="Фотография третьего посетителя">
           </div>
-          <p class="reviews__person_name">
+          <p class="reviews__person-name">
             Никита Ященко
           </p>
         </div>
@@ -331,7 +349,7 @@
     </div>
   </section>
 
-  <section class="main__section faq">
+  <section class="faq">
     <div class="container">
       <h2 class="faq__title title">Частые вопросы</h2>
 
@@ -341,21 +359,25 @@
             <button class="faq__question-btn" type="button"></button>
           </p>
         </li>
+
         <li class="faq__item">
           <p class="faq__question">Могут ли мне вернуть деньги за бронь?
             <button class="faq__question-btn" type="button"></button>
           </p>
         </li>
+
         <li class="faq__item">
           <p class="faq__question">Какая комната самая популярная?
             <button class="faq__question-btn" type="button"></button>
           </p>
         </li>
+
         <li class="faq__item">
           <p class="faq__question">Как получить VIP карту?
             <button class="faq__question-btn" type="button"></button>
           </p>
         </li>
+
         <li class="faq__item">
           <p class="faq__question">Какая комната самая популярная?
             <button class="faq__question-btn" type="button"></button>
@@ -369,9 +391,9 @@
 <footer class="footer">
   <section class="footer__contacts contacts">
     <div class="container">
-      <h2 class="contacts__title title">Контакты</h2>
+      <h2 class="contacts__title title" id="contacts">Контакты</h2>
       <div class="footer__container">
-        <div class="contact__container">
+        <div class="contacts__container">
           <p class="contacts__address contacts__icon">
             <a class="contacts__icon-link" href="#">
               <svg width="35" height="32" viewBox="0 0 35 32" xmlns="http://www.w3.org/2000/svg">
@@ -380,7 +402,7 @@
                 <path
                   d="M25.4891 21.5435L20.3313 28.9239C18.9962 30.829 15.9593 30.8228 14.6306 28.9257L9.46443 21.5454C4.91897 22.5073 2.11688 24.2693 2.11688 26.375C2.11688 30.0289 10.0333 32 17.4815 32C24.9297 32 32.846 30.0289 32.846 26.375C32.846 24.2678 30.0401 22.5048 25.4891 21.5435Z"/>
               </svg>
-              г. Москва ул. Аквамарина, 16
+              г. Москва<br>ул. Усачёва, 29 кв. 3
             </a>
           </p>
           <p class="contacts__phone contacts__icon">
@@ -414,6 +436,7 @@
                 </svg>
               </a>
             </li>
+
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Ссылка на Telegram">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -422,6 +445,7 @@
                 </svg>
               </a>
             </li>
+
             <li class="social__item">
               <a class="social__link" href="#" aria-label="ССылка на Pinterest">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -430,6 +454,7 @@
                 </svg>
               </a>
             </li>
+
             <li class="social__item">
               <a class="social__link" href="#" aria-label="Ссылка на StumbleUpon">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -442,16 +467,16 @@
             </li>
           </ul>
         </div>
-        <div class="contact__map">
-          <img class="contact__map_picture" src="img/map.jpg" alt="карта местонахождения">
+        <div class="contacts__map">
+          <img class="contacts__map-picture" src="img/map.jpg" alt="карта местонахождения">
         </div>
       </div>
 
-      <div class="footer__copyright">
-        <p class="footer__copyright_name-company">© Game Over, 2022</p>
-        <p class="footer__copyright_designer">
+      <div class="footer__copyright copyright">
+        <p class="copyright__name-company">© Game Over, 2022</p>
+        <p class="copyright__designer">
           Design by Anastasia Ilina
-          <a class="footer__copyright_designer-email" href="mailto:ilina9825@gmail.com">ilina9825@gmail.com</a>
+          <a class="copyright__designer-email" href="mailto:ilina9825@gmail.com">ilina9825@gmail.com</a>
         </p>
       </div>
     </div>

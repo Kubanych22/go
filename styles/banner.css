@@ -1,10 +1,12 @@
 .banner {
   max-width: 1180px;
+  padding-top: 25px;
+  padding-bottom: 50px;
   margin: 0 auto;
   height: 920px;
   background-image: url("../img/banner.png");
   background-repeat: no-repeat;
-  background-position: top 115px right -27px
+  background-position: top 100px right 0;
 }
 
 .banner__title {
@@ -12,6 +14,7 @@
   line-height: 1;
   font-weight: 900;
   letter-spacing: -0.1em;
+  z-index: -10;
 }
 
 .banner__description {
@@ -29,42 +32,36 @@
   text-align: center;
 }
 
-.features__thematic-halls_number {
+.features__halls-number {
   font-size: 100px;
   font-weight: 900;
   line-height: 141px;
   color: var(--color-text-second);
 }
 
-.features__thematic-halls_text {
+.features__halls-text {
   max-width: 193px;
   font-size: 30px;
-  line-height: 35px;
+  line-height: 34px;
 }
 
-.features__latest-equipment_new {
+.features__equipment-new {
   font-size: 75px;
   font-weight: 900;
   line-height: 106px;
   font-variant: all-small-caps;
   color: var(--color-text-second);
+  padding-bottom: 5px;
 }
 
-.features__latest-equipment_text {
+.features__equipment-text {
   max-width: 161px;
   font-size: 30px;
   line-height: 35px;
 }
 
-.banner__btns {
-  max-width: 636px;
-  height: 130px;
-  display: flex;
-}
-
 .banner__book {
   margin-right: auto;
-  height: 80px;
   padding: 25px 69px;
   font-size: 26px;
   font-weight: 700;
@@ -91,56 +88,432 @@
   background-color: var(var(--color-bg-hover-second));
 }
 
-.banner__down-btn {
-  align-self: flex-end;
-  height: 97px;
-  left: 535px;
-  bottom: -65px;
-  padding: 0;
+.banner__down {
+  display: block;
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
   background-color: inherit;
   border: none;
   cursor: pointer;
   transition: outline 0.2s;
 }
 
-.banner__down-btn:focus {
+.banner__down:focus {
   outline: 2px solid var(--color-text-second);
 }
 
-.banner__down-btn:active {
+.banner__down:active {
   outline: none !important;
 }
 
-.banner__down-btn_svg {
+.banner__down-svg {
+  display: block;
   fill: transparent;
 }
 
-.banner__down-btn_svg circle {
+.banner__down-svg circle {
   stroke: var(--color-text-main);
   transition: all 0.3s;
 }
 
-.banner__down-btn_svg rect {
+.banner__down-svg rect {
   fill: var(--color-text-main);
   transition: all 0.3s;
 }
 
-.banner__down-btn_svg:hover circle {
+.banner__down-svg:hover circle {
   fill: var(--color-text-main);
 }
 
-.banner__down-btn_svg:hover rect {
+.banner__down-svg:hover rect {
   fill: var(--color-bg-hover-primery);
 }
 
-.banner__down-btn_svg:active circle {
+.banner__down-svg:active circle {
   fill: var(--color-bg-hover-primery);
   stroke: var(--color-bg-hover-primery);
 }
 
-.banner__down-btn_svg:active rect {
+.banner__down-svg:active rect {
   fill: var(--color-text-main);
 }
 
+@media (max-width: 1200px) {
+  .banner__title {
+    font-size: 135px;
+  }
 
+  .banner__description {
+    font-size: 25px;
+  }
 
+  .features {
+    gap: 40px;
+  }
+
+  .features__halls-number {
+    font-size: 90px;
+  }
+
+  .features__halls-text,
+  .features__equipment-text {
+    font-size: 28px;
+  }
+
+  .features__equipment-new {
+    font-size: 68px;
+    padding-bottom: 0;
+  }
+
+  .banner__book {
+    padding: 21px 50px;
+    font-size: 24px;
+  }
+
+  .banner__down {
+    width: 77px;
+    height: 77px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    padding-top: 15px;
+    padding-bottom: 42px;
+  }
+  .banner__title {
+    font-size: 120px;
+  }
+
+  .banner__description {
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+
+  .features__halls-number {
+    font-size: 80px;
+  }
+
+  .features__halls-text,
+  .features__equipment-text {
+    font-size: 26px;
+  }
+
+  .features__equipment-new {
+    font-size: 60px;
+    padding-bottom: 7px;
+  }
+
+  .banner__book {
+    padding: 14px 30px;
+    font-size: 18px;
+  }
+
+  .banner__down {
+    width: 77px;
+    height: 77px;
+    margin-left: 35%;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner {
+    background-position: top 100px right -101px;
+    height: 800px;
+  }
+
+  .banner__title {
+    font-size: 103px;
+  }
+
+  .banner__description {
+    font-size: 20px;
+  }
+
+  .features {
+    margin-bottom: 100px;
+    gap: 15px;
+  }
+
+  .features__halls-number {
+    font-size: 60px;
+  }
+
+  .features__halls-text {
+    max-width: 180px;
+  }
+
+  .features__halls-text,
+  .features__equipment-text {
+    font-size: 21px;
+  }
+
+  .features__equipment-new {
+    font-size: 50px;
+    padding-bottom: 15px;
+  }
+
+  .banner__book {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+
+  .banner__down {
+    width: 67px;
+    height: 67px;
+    margin-left: 40%;
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    background-position: top 100px right -101px;
+    height: 700px;
+  }
+
+  .banner__title {
+    font-size: 86px;
+  }
+
+  .banner__description {
+    font-size: 18px;
+  }
+
+  .features {
+    margin-bottom: 100px;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .features__halls-number {
+    font-size: 50px;
+    line-height: normal;
+  }
+
+  .features__halls-text {
+    max-width: 125px;
+  }
+
+  .features__halls-text,
+  .features__equipment-text {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .features__equipment-new {
+    font-size: 40px;
+    padding-bottom: 0;
+    padding-top: 0;
+    line-height: normal;
+  }
+
+  .banner__book {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+
+  .banner__down {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .banner {
+    height: 600px;
+    background-position: top 67px right -15px;
+    background-size: 64% 77%;
+  }
+
+  .banner__title {
+    font-size: 50px;
+    line-height: 75px;
+    letter-spacing: -2.8px;
+  }
+
+  .banner__description {
+    margin-bottom: 30px;
+    margin-left: 30px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .features {
+    margin-bottom: 100px;
+    align-items: start;
+    gap: 0;
+  }
+
+  .features__halls-number {
+    font-size: 50px;
+    line-height: normal;
+  }
+
+  .features__halls-text {
+    max-width: 125px;
+  }
+
+  .features__halls-text,
+  .features__equipment-text {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .features__equipment-new {
+    font-size: 40px;
+    line-height: normal;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .banner__book {
+    padding: 12px 20px;
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+
+  .banner__down {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .banner {
+    background-position: top 50px right 10px;
+    background-size: 60% 77%;
+    height: 350px;
+  }
+
+  .banner__title {
+    font-size: 35px;
+    line-height: normal;
+    letter-spacing: 3px;
+  }
+
+  .banner__description {
+    margin-left: 70px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .features {
+    margin-bottom: 42px;
+    align-items: center;
+    gap: 50px;
+    justify-content: flex-start;
+  }
+
+  .features__halls {
+    max-width: 65px;
+  }
+
+  .features__halls-number {
+    font-size: 26px;
+    line-height: normal;
+    padding-left: 20px;
+  }
+
+  .features__equipment {
+    max-width: 54px;
+  }
+
+  .features__halls-text {
+    max-width: 125px;
+  }
+
+  .features__halls-text span {
+    padding-left: 26px;
+  }
+
+  .features__halls-text,
+  .features__equipment-text {
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  .features__equipment-new {
+    font-size: 22px;
+    line-height: normal;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 3px;
+  }
+
+  .banner__book {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .banner__down {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .banner {
+    background-position: top 60px right -15px;
+    background-size: 60% 77%;
+    padding-bottom: 25px;
+  }
+
+  .banner__title {
+    letter-spacing: 0;
+  }
+
+  .banner__description {
+    margin-left: 42px;
+  }
+
+  .features {
+    margin-bottom: 42px;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .features__halls {
+    max-width: 65px;
+  }
+
+  .features__halls-number {
+    font-size: 26px;
+    line-height: normal;
+    padding-left: 5px;
+  }
+
+  .features__equipment {
+    max-width: 54px;
+  }
+
+  .features__halls-text {
+    max-width: 125px;
+  }
+
+  .features__halls-text span {
+    padding-left: 8px;
+  }
+
+  .features__halls-text,
+  .features__equipment-text {
+    font-size: 10px;
+    line-height: normal;
+  }
+
+  .features__equipment-new {
+    font-size: 22px;
+    line-height: normal;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .banner__book {
+    padding: 12px 14px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .banner__down {
+    display: none;
+  }
+}
