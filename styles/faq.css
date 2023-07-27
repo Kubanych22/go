@@ -154,3 +154,33 @@
     top: 8px;
   }
 }
+
+@media (max-width: 320px) {
+  .faq {
+    padding: 15px 0;
+  }
+
+  .faq__item {
+    width: 280px;
+    height: 46px;
+  }
+
+  .faq__item:nth-child(n) {
+    width: 260px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 13px 7px;
+    margin-bottom: 10px;
+  }
+
+  .faq__question {
+    width: 224px;
+  }
+
+  .faq__question-btn:after {
+    width: 30px;
+    height: 30px;
+    right: 13px;
+    top: 8px;
+  }
+}

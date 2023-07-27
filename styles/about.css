@@ -199,3 +199,35 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 320px) {
+  .about {
+    padding-bottom: 17px;
+    padding-top: 30px;
+  }
+
+  .about__container {
+    grid-template-columns: minmax(270px, 1fr);
+    gap: 15px 0;
+  }
+
+  .about__text-wrapper {
+    max-width: 260px;
+    margin: 0 auto 15px;
+  }
+
+  .about__images {
+    justify-self: center;
+    max-width: 260px;
+    max-height: 260px;
+  }
+
+  .about__creator {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .about__creator-info {
+    justify-content: center;
+  }
+}
