@@ -7,6 +7,7 @@
   background-image: url("../img/banner.png");
   background-repeat: no-repeat;
   background-position: top 100px right 0;
+  /*z-index: -1;*/
 }
 
 .banner__title {
@@ -14,7 +15,7 @@
   line-height: 1;
   font-weight: 900;
   letter-spacing: -0.1em;
-  z-index: -10;
+  /*z-index: -10;*/
 }
 
 .banner__description {

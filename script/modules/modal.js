@@ -1,4 +1,4 @@
-const openModalBtn = document.querySelector('.header__order-btn');
+const openModalBtn = document.querySelectorAll('.header__order-btn');
 
 const createForm = () => {
   const modal = document.createElement('div');
@@ -84,7 +84,7 @@ const closeModal = () => {
   modal.classList.remove('is-visible');
 };
 
-openModalBtn.addEventListener('click', openModal);
+openModalBtn.forEach(item => item.addEventListener('click', openModal));
 
 form.addEventListener('submit', getData);
 

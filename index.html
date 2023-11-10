@@ -17,32 +17,39 @@
 <body>
 <header class="header">
   <div class="container header__container">
-    <button class="burger" type="button">
-      <span class="burger__line burger-long"></span>
-      <span class="burger__line burger-long"></span>
-      <span class="burger__line burger-short"></span>
-    </button>
+    <div class="clickable-area">
+      <button class="burger" type="button">
+        <span class="burger__line burger-long"></span>
+        <span class="burger__line burger-long"></span>
+        <span class="burger__line burger-short"></span>
+      </button>
+    </div>
     <img class="header__logo" src="img/logo.svg" alt="логотип">
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="#halls">залы</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#about">О нас</a>
-        </li>
-        <li class="navigation__item navigation__item-scroll">
-          <a class="navigation__link" href="#reserve">Бронь</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#reviews">отзывы</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#contacts">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-    <button class="header__order-btn" type="button">Заказать звонок</button>
+<!--    <div class="navigation__wrapper">-->
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#halls">залы</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#about">О нас</a>
+          </li>
+          <li class="navigation__item navigation__item-scroll">
+            <a class="navigation__link" href="#reserve">Бронь</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#reviews">отзывы</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#contacts">Контакты</a>
+          </li>
+          <li class="navigation__item">
+            <button class="header__order-btn" id="inner-list" type="button">Заказать звонок</button>
+          </li>
+        </ul>
+      </nav>
+<!--    </div>-->
+    <button class="header__order-btn" id="outer-list" type="button">Заказать звонок</button>
   </div>
 </header>
 
