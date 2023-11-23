@@ -1,9 +1,5 @@
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.navigation');
-
-// const innerList = document.querySelector('#inner-list');
-// const outerList = document.querySelector('#outer-list');
-
 const burgerCloseLine = document.querySelectorAll('.burger__line')
 const burgerClose = document.createElement('svg');
 
@@ -12,7 +8,6 @@ burger.addEventListener('click', (e) => {
   if (e.target.classList.contains('burger__line')) {
     burger.style.display = 'block';
     nav.style.display = 'block';
-    // innerList.style.display = 'none';
     burgerCloseLine.forEach(item => item.style.display = 'none');
     burgerClose.classList.add('burger__svg');
     burgerClose.innerHTML = `
@@ -22,13 +17,14 @@ burger.addEventListener('click', (e) => {
     </svg>
   `;
     burger.append(burgerClose);
-    
-    // openModalBtn.style.display = 'block';
+    burgerClose.style.display = 'block'
     
   } else {
-    burgerClose.innerHTML = '';
+    burgerCloseLine.innerHTML = '';
     burgerCloseLine.forEach(item => item.style.display = 'block');
-    nav.style.display = 'none'
+    nav.style.display = 'none';
+    burgerClose.style.display = 'none'
   }
-
 });
+
+
