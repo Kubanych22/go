@@ -7,12 +7,12 @@ const burgerClose = document.createElement('svg');
 
 let startTime = NaN;
 const durationOpacity = 700;
-const hideOverlay = (timestamp) => {
+const showBurgerMenu = (timestamp) => {
   startTime ||= timestamp;
   const progress = (timestamp - startTime) / durationOpacity;
   nav.style.opacity = progress.toString();
   if (progress < 1) {
-    requestAnimationFrame(hideOverlay);
+    requestAnimationFrame(showBurgerMenu);
   } else {
     startTime = NaN;
   }
@@ -24,7 +24,7 @@ const handle = (e) => {
     burger.style.display = 'block';
     nav.style.opacity = 0 + '';
     nav.style.display = 'block';
-    requestAnimationFrame(hideOverlay);
+    requestAnimationFrame(showBurgerMenu);
     burgerCloseLine.forEach(item => item.style.display = 'none');
     burgerClose.classList.add('burger__svg');
     burgerClose.innerHTML = `
