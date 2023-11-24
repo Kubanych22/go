@@ -1,4 +1,4 @@
-import {debounce} from './debounce.js';
+import {animation} from './animation.js';
 
 const burger = document.querySelector('.burger');
 export const nav = document.querySelector('.navigation');
@@ -44,7 +44,7 @@ const handle = (e) => {
   }
 };
 
-const debounceHandle = debounce(handle);
+const debounceHandle = animation(handle);
 burger.addEventListener('click', debounceHandle);
 
 

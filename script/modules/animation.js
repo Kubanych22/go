@@ -1,4 +1,4 @@
-export const debounce = (fn, raf = NaN) => (...args) => {
+export const animation = (fn, raf = NaN) => (...args) => {
   
   if (raf) return;
   raf = requestAnimationFrame(() => {
