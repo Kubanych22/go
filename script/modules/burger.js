@@ -1,13 +1,30 @@
+import {debounce} from './debounce.js';
+
 const burger = document.querySelector('.burger');
-const nav = document.querySelector('.navigation');
-const burgerCloseLine = document.querySelectorAll('.burger__line')
+export const nav = document.querySelector('.navigation');
+const burgerCloseLine = document.querySelectorAll('.burger__line');
 const burgerClose = document.createElement('svg');
 
-burger.addEventListener('click', (e) => {
+let startTime = NaN;
+const durationOpacity = 700;
+const hideOverlay = (timestamp) => {
+  startTime ||= timestamp;
+  const progress = (timestamp - startTime) / durationOpacity;
+  nav.style.opacity = progress.toString();
+  if (progress < 1) {
+    requestAnimationFrame(hideOverlay);
+  } else {
+    startTime = NaN;
+  }
+};
+
+const handle = (e) => {
   e.preventDefault();
   if (e.target.classList.contains('burger__line')) {
     burger.style.display = 'block';
+    nav.style.opacity = 0 + '';
     nav.style.display = 'block';
+    requestAnimationFrame(hideOverlay);
     burgerCloseLine.forEach(item => item.style.display = 'none');
     burgerClose.classList.add('burger__svg');
     burgerClose.innerHTML = `
@@ -17,14 +34,17 @@ burger.addEventListener('click', (e) => {
     </svg>
   `;
     burger.append(burgerClose);
-    burgerClose.style.display = 'block'
+    burgerClose.style.display = 'block';
     
   } else {
     burgerCloseLine.innerHTML = '';
     burgerCloseLine.forEach(item => item.style.display = 'block');
     nav.style.display = 'none';
-    burgerClose.style.display = 'none'
+    burgerClose.style.display = 'none';
   }
-});
+};
+
+const debounceHandle = debounce(handle);
+burger.addEventListener('click', debounceHandle);
 
 
