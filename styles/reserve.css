@@ -134,7 +134,7 @@ input {
 .last__list {
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 280px);
+  grid-template-columns: 1fr;
   grid-template-areas:
     "date-time name phone"
     "people last-name email";
@@ -166,6 +166,71 @@ input {
   grid-area: date-time;
   display: flex;
   gap: 0 14px;
+}
+
+.date-time__label {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.ui-datepicker-trigger {
+  position: absolute;
+  width: 15px;
+  height: 21px;
+  right: 5px;
+  top: 14px;
+  color: #211e1e;
+}
+
+.ui-state-highlight {
+  background-color: #6c0287 !important;
+  color: #ffffff !important;
+}
+
+.ui-datepicker td a {
+  text-align: center !important;
+}
+
+.select__label {
+  position: relative;
+  display: inline-block;
+}
+
+.time-btn {
+  position: absolute;
+  display: block;
+  width: 15px;
+  right: 5px;
+  top: 14px;
+}
+
+.time-btn svg {
+  color: #211e1e;
+}
+
+.xdsoft_time_box>div>div.xdsoft_current {
+  background-color: #6c0287 !important;
+  box-shadow: none !important;
+}
+
+.number__man::-webkit-inner-spin-button,
+.number__man::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.number__man {
+  -moz-appearance: textfield;
+  background-image: url('../img/down-arrow.svg');
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+  background-size: 15px 21px;
+}
+
+.just-validate-error-label {
+  color: #ffffff !important;
 }
 
 .layout-name {
@@ -230,6 +295,10 @@ input {
     font-size: 25px;
     line-height: 1.2;
   }
+  
+  .last__list {
+    grid-template-columns: repeat(auto-fit, 280px);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -251,6 +320,7 @@ input {
 
   .layout-name {
     max-width: 251px;
+    width: 251px;
   }
 
   .layout-phone {
@@ -274,11 +344,13 @@ input {
   }
 
   .date-time {
+    max-width: 267px;
     width: 267px;
   }
 
   .date-time__input {
     width: 126px;
+    outline: none;
   }
 
   .form__btn {
@@ -453,5 +525,9 @@ input {
     padding: 14px 24px;
     font-size: 18px;
     line-height: 26px;
+  }
+  
+  .ui-datepicker-trigger {
+    right: 20px;
   }
 }

@@ -7,7 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="styles/jquery-ui.min.css">
+  <link rel="stylesheet" href="styles/jquery.datetimepicker.min.css" >
+  
   <link rel="stylesheet" href="styles/index.css">
+  
+  <script defer src="script/modules/jquery-3.7.1.min.js"></script>
+  <script defer src="script/modules/jquery-ui.min.js"></script>
+  <script defer src="script/modules/datepicker-ru.js"></script>
+  <script defer src="script/modules/jquery.datetimepicker.full.min.js"></script>
   
   <script src="script/script.js" type="module"></script>
 
@@ -25,7 +33,6 @@
       </button>
     </div>
     <img class="header__logo" src="img/logo.svg" alt="логотип">
-<!--    <div class="navigation__wrapper">-->
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -48,7 +55,6 @@
           </li>
         </ul>
       </nav>
-<!--    </div>-->
     <button class="header__order-btn" id="outer-list" type="button">Заказать звонок</button>
   </div>
 </header>
@@ -109,30 +115,34 @@
   </section>
 
   <section class="halls">
-    <div class="container">
+    <div class="container slider__container">
       <h2 class="halls__title title" id="halls">Наши залы</h2>
-      <ul class="halls__list">
-        <li class="halls__item">
-          <a class="halls__link" href="vibes-80.html">
-            <p class="halls__name">80`s vibes</p>
-          </a>
-        </li>
-        <li class="halls__item">
-          <a class="halls__link" href="star-wars.html">
-            <p class="halls__name">Star wars</p>
-          </a>
-        </li>
-        <li class="halls__item">
-          <a class="halls__link" href="wild-west.html">
-            <p class="halls__name">Wild west</p>
-          </a>
-        </li>
-        <li class="halls__item">
-          <a class="halls__link" href="neon-style.html">
-            <p class="halls__name">Neon style</p>
-          </a>
-        </li>
-      </ul>
+      <div class="swiper">
+        <ul class="halls__list swiper-wrapper">
+          <li class="halls__item swiper-slide slide">
+            <a class="halls__link" href="vibes-80.html">
+              <p class="halls__name">80`s vibes</p>
+            </a>
+          </li>
+          <li class="halls__item swiper-slide slide">
+            <a class="halls__link" href="star-wars.html">
+              <p class="halls__name">Star wars</p>
+            </a>
+          </li>
+          <li class="halls__item swiper-slide slide">
+            <a class="halls__link" href="wild-west.html">
+              <p class="halls__name">Wild west</p>
+            </a>
+          </li>
+          <li class="halls__item swiper-slide slide">
+            <a class="halls__link" href="neon-style.html">
+              <p class="halls__name">Neon style</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
 
@@ -232,36 +242,41 @@
             <li class="last__item">
               <div class="last__item-wrapper date-time">
                 <label class="date-time__label" for="date">
-                  <input class="date-time__input" type="date" name="date" id="date" required>
+                  <input class="date-time__input" type="text" name="date" id="date" placeholder="Дата" required>
                 </label>
-                <label class="date-time__label" for="time">
-                  <input class="date-time__input" type="time" name="time" id="time" required>
+                <label class="date-time__label select__label" for="time">
+                  <input class="date-time__input" type="text" name="time" id="time" placeholder="Время" required>
+                  <span class="time-btn" id="time-btn">
+                    <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.5 15L1.40673 3.75L19.5933 3.75L10.5 15Z" fill="currentColor"/>
+                    </svg>
+                    </span>
                 </label>
               </div>
             </li>
 
             <li class="last__item control layout-name">
               <label class="control__label" for="name">Имя
-                <input class="control__input" type="text" name="name" id="name" required>
+                <input class="control__input" type="text" name="name" id="name" pattern="[a-zA-Zа-яА-ЯёЁ]{3,30}" title="Имя должно содержать не менее 3-х букв. Цифры не допускаются." required>
               </label>
             </li>
 
             <li class="last__item control layout-phone">
               <label class="control__label" for="phone">Телефон
-                <input class="control__input" type="tel" name="phone" id="phone" required>
+                <input class="control__input phone" type="tel" name="phone" id="phone" required>
               </label>
             </li>
 
             <li class="last__item control layout-number">
-              <label class="control__label" for="number">
-                <input class="control__input" type="number" name="number" id="number" placeholder="Сколько человек"
-                       required>
+              <label class="control__label select__label" for="number">
+                <input class="control__input number__man" type="number" step="1" min="1" max="100" name="number" id="number" placeholder="Сколько человек" required>
               </label>
+              <div class="error-number"></div>
             </li>
 
             <li class="last__item control layout-last-name">
-              <label class="control__label" for="surname">Фамилия
-                <input class="control__input" type="text" name="surname" id="surname" required>
+              <label class="control__label" for="sirname">Фамилия
+                <input class="control__input" type="text" name="sirname" id="sirname" pattern="[a-zA-Zа-яА-ЯёЁ]{3,30}"  title="Фамилия должна содержать не менее 3-х букв. Цифры не допускаются." required>
               </label>
             </li>
 
@@ -271,7 +286,6 @@
               </label>
             </li>
             <li class="last__item control button-control">
-<!--              <button class="form__btn" type="submit" form="reserve">Забронировать</button>-->
             </li>
           </ul>
         </fieldset>

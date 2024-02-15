@@ -1,3 +1,6 @@
+import Inputmask from 'inputmask/lib/inputmask.js';
+import JustValidate from 'just-validate';
+
 const openModalBtn = document.querySelectorAll('.header__order-btn');
 
 const createForm = () => {
@@ -40,7 +43,7 @@ const createForm = () => {
   formLabelPhone.textContent = 'Телефон:';
   const formInputPhone = document.createElement('input');
   formInputPhone.classList.add('form__input-phone');
-  formInputPhone.type = 'text';
+  formInputPhone.type = 'tel';
   formInputPhone.id = 'phone';
   formInputPhone.name = 'phone';
   formInputPhone.required = true;
@@ -74,10 +77,8 @@ const getData = (target) => {
   target.preventDefault();
   const inputName = form.querySelector('.form__input-name');
   const userName = inputName.value;
-  // console.log('userName:', userName);
   const inputPhone = form.querySelector('.form__input-phone');
   const userPhone = inputPhone.value;
-  // console.log('userPhone:', userPhone);
 };
 
 const closeModal = () => {
@@ -95,3 +96,40 @@ modal.addEventListener('click', (e) => {
     closeModal();
   }
 });
+
+const inputTel = document.querySelector('.form__input-phone');
+const telMask = new Inputmask('+7(999) 999-99-99');
+telMask.mask(inputTel);
+
+const justValidate = new JustValidate('.modal-form');
+justValidate
+  .addField('.form__input-name', [
+    {
+      rule: 'required',
+      errorMessage: 'Поле обязательно к заполнению',
+    },
+    {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Имя должно быть не короче 2-х символов',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Имя должно содержать не более 30-ти символов',
+    },
+  ])
+  .addField('.form__input-phone', [
+    {
+      rule: 'required',
+      errorMessage: 'Поле обязательно к заполнению',
+    },
+    {
+      validator() {
+        const phone = inputTel.inputmask.unmaskedvalue();
+        return !!(Number(phone) && phone.length === 10);
+      },
+      errorMessage: 'Некорректный телефон',
+    },
+  ])
+
